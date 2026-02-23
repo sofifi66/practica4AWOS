@@ -9,8 +9,9 @@ def productos():
         user="u760464709_prueba_usr",
         password="|Au/mc*H2jH3|",
         database="u760464709_prueba_bd"
-)
-mycursor = mydb.cursor()
-mycursor.execute("SELECT * FROM productos")
-myresult =mycursor.fetchall()
-return make_response(jsonfy(myresult))
+    )
+    
+    mycursor = mydb.cursor()
+    mycursor.execute("SELECT * FROM productos")
+    myresult =mycursor.fetchall()
+   return make_response(jsonfy(myresult))
