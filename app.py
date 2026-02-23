@@ -10,7 +10,6 @@ def productos():
         password="|Au/mc*H2jH3|",
         database="u760464709_prueba_bd"
     )
-    
     mycursor = mydb.cursor()
     mycursor.execute("SELECT * FROM productos")
     myresult =mycursor.fetchall()
