@@ -4,13 +4,13 @@ app = Flask(__name__)
 @app.route('/productos')
 def productos():
     import mysql.connector
-mydb = mysql.connector.connect(
-    host="46.28.42.226",
-    user="u760464709_prueba_usr",
-    password="|Au/mc*H2jH3|",
-    database="u760464709_prueba_bd"
+    mydb = mysql.connector.connect(
+        host="46.28.42.226",
+        user="u760464709_prueba_usr",
+        password="|Au/mc*H2jH3|",
+        database="u760464709_prueba_bd"
 )
-mycursor= mydb.cursor()
+mycursor = mydb.cursor()
 mycursor.execute("SELECT * FROM productos")
 myresult =mycursor.fetchall()
 return make_response(jsonfy(myresult))
